@@ -126,7 +126,13 @@ function App(){
         <div className="mt-8 flex flex-wrap gap-3">
           <a href="#work" className={btn+" bg-cyan-400 text-[#090D16] hover:bg-cyan-300"}>View work <Ic n="arrow" s={16}/></a>
           <button onClick={copy} className={btn+" border border-[#1E293B] bg-[#111827] hover:border-cyan-400/50"}><Ic n="copy" s={16}/>Copy Email</button>
-          <button onClick={()=>window.print()} className={btn+" border border-[#1E293B] bg-[#111827] hover:border-cyan-400/50"}><Ic n="dl" s={16}/>Download CV</button>
+          <a
+            href="./Thrivikraman_Resume.pdf"
+            download="Thrivikraman_Resume.pdf"
+            className={btn+" border border-[#1E293B] bg-[#111827] hover:border-cyan-400/50"}
+          >
+            <Ic n="dl" s={16}/>Download CV
+          </a>
         </div>
         <div className="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-px bg-[#1E293B] border border-[#1E293B] rounded-xl overflow-hidden">
           {METRICS.map(([v,l])=><div key={l} className="bg-[#111827] p-5 sm:p-6"><div className="text-3xl sm:text-4xl font-bold text-cyan-300">{v}</div><div className="text-xs sm:text-sm text-slate-400 mt-1">{l}</div></div>)}
